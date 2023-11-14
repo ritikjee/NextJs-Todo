@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 function Navbar() {
     return (
         <div className="flex justify-between px-5 py-3 bg-base-300">
