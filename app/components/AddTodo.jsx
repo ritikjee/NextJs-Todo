@@ -1,4 +1,4 @@
-function AddTodo({}) {
+function AddTodo({setShowAddTodo}) {
     return (
         
         <div className='overflow-y-auto flex items-center justify-center h-screen w-screen overflow-x-hidden fixed top-0 right-0 left-0 z-50  md:inset-0 '>
@@ -18,7 +18,11 @@ function AddTodo({}) {
                             <textarea placeholder="Bio" className="textarea textarea-bordered textarea-xs w-full sm:w-96" ></textarea>
                         </div>
                         <div className='flex py-10 items-center justify-center gap-5'>
-                            <button className='btn btn-error'>Cancel</button>
+                            <button className='btn btn-error'
+                            onClick={()=>{
+                                setShowAddTodo(false)
+                            }}
+                            >Cancel</button>
                             <button className='btn btn-success'>Add</button>
                         </div>
                     </div>
